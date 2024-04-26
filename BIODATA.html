@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>REZA DAN ALDI</title>
+</head>
+<body> 
+<ul>
+    <li><a href="PROFIL.html">PROFIL</a></li>
+    <li><a href="GALERY.html">GALERY</a></li>
+    <li><a href="berita aldi.html">HOME</a></li>
+	<li><a href="rumus.html">rumus</a></li>
+</ul>
+<h1>BIODATA</h1>
+<p> MASUKKAN BIODATA ANDA.</p>
+<FORM>
+	<LABEL>MASUKAN NAMA ANDA :</LABEL>
+	<input type="TEXT" id="nama">
+	<br>
+	<LABEL>DARI KELAS MANA :</LABEL>
+	<input type="TEXT" id="kelas">
+	<br>
+	<LABEL>NOMER HP :</LABEL>
+	<input type="number" id="WA">
+	<br>
+	<LABEL>TEMPAT LAHIRMU:</LABEL>
+	<input type="TEXT" id="TEMPAT">
+	<br>
+	<LABEL>TANGGAL LAHIRMU:</LABEL>
+	<input type="Date" id="LAHIRMU">
+	<br>
+	<Button onclick="tampilkanhasil()">Daftar</Button>
+</FORM>
+<Script>
+function tampilkanhasil() {
+	var NAMA = document.getElementById("nama").value ;
+	var KELAS = document.getElementById("kelas").value ;
+	var WA = document.getElementById("WA").value ;
+	var TEMPAT = document.getElementById("TEMPAT").value ;
+	var LAHIRMU = document.getElementById("LAHIRMU").value ;
+	var date = new Date(LAHIRMU);
+	var options = {day: 'numeric', month: 'long', year: 'numeric'};
+	var tanggalstring = date.toLocaleDateString('id-ID', options);
+	document.write("<h1>BIODATA</h1>");
+	document.write("<p>NAMA : "+NAMA+"</p>");
+	document.write("<p>KELAS : "+KELAS+"</p>");
+	document.write("<p>NOMER WA : "+WA+"</p>");
+	document.write("<p>TEMPAT, TANGGAl LAHIRMU : "+TEMPAT+", "+tanggalstring+"</p>");
+}
+</Script>
+</body>
+<hr>
+<a href="login.html">logout</a>
+</html>
